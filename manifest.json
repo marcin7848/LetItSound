@@ -1,0 +1,65 @@
+{
+	"manifest_version": 2,
+	"name": "Let it Sound!",
+	"description": "Manage browsing by voice",
+	"version": "1.0",
+	"icons": {
+		"16": "img/16.png",
+		"32": "img/32.png",
+		"128": "img/128.png"
+	},
+
+	"browser_action": {
+		"default_icon": {                          
+			"128": "img/128.png"            
+		},
+		"default_title": "Let it Sound! Click to toggle listening"     
+	},
+
+	"options_page": "src/views/options.html",
+
+	"background": {
+		"scripts": [
+			"src/jquery-3.5.1.min.js",
+			"src/background.js",
+			"src/listening.js",
+			"src/changeIcon.js",
+			"src/translations.js",
+			"src/processTranscript.js"
+		],
+		"persistent": true
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"css": [
+				"src/styles/style.css"
+			],
+			"js": [
+				"src/jquery-3.5.1.min.js",
+				"src/translations.js",
+				"src/contentGlobalFunctions.js",
+				"src/manageHelpBox.js",
+				"src/showTranscript.js",
+				"src/tagsManagement.js",
+				"src/updateContent.js"
+			],
+			"run_at": "document_idle"
+		}
+	],
+
+	"permissions": [
+		"unlimitedStorage",
+		"tabs",
+		"activeTab",
+		"browsingData",
+		"notifications",
+		"webNavigation",
+		"storage",
+		"background",
+		"clipboardWrite",
+		"clipboardRead",
+		"*://*/*"
+	]
+}

@@ -1,0 +1,118 @@
+.letItSound_helpBox {
+	all: initial !important;
+}
+
+.letItSound_helpBox_outside {
+	z-index: 2147483641;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 14px;
+	cursor: pointer;
+	pointer-events: initial!important;
+}
+
+.letItSound_helpBox_relative {
+	z-index: 21;
+	position: relative;
+}
+
+.letItSound_helpBox_main {
+	margin: 0;
+	text-align: left;
+	width: 320px;
+	padding: 0;
+	pointer-events: all;
+	overflow-x: hidden;
+	background: rgba(30, 30, 30, 0.88);
+	position: absolute;
+	right: 0;
+	top: 10vh;
+	transition: opacity 0.5s;
+	opacity: 1;
+}
+
+.letItSound_helpBox_inside {
+	color: white;
+	padding: 10px;
+}
+
+.letItSound_helpBox_commands {
+	max-height: 70vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid #888;
+	border-right: none;
+	border-left: none;
+}
+
+.letItSound_helpBox_commandTitle {
+	font-size: 25px;
+}
+
+.letItSound_helpBox_commandLine{
+	justify-content: space-between;
+	margin: 2px 5px;
+}
+
+.letItSound_helpBox_commandName {
+	color: #ddd;
+	padding: 2px 4px;
+	line-height: 1.6em;
+	font-size: 20px;
+	border-bottom: 1px solid #E6EEEE;
+}
+
+.letItSound_messageBox{
+	z-index: 2147483642;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	pointer-events: initial!important;
+}
+
+.letItSound_messageBox_inside{
+	position: relative;
+	z-index: 22;
+	margin: 50px auto;
+	left: 0;
+	right: 0;
+	max-width: 80%;
+	background: rgba(30, 30, 30, 0.88);
+}
+
+.messageText{
+	color: #C7C8C8;
+	font-size: 35px;
+}
+
+.letItSound_tagsBox{
+	z-index: 2147483640;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	pointer-events: initial!important;
+}
+
+.letItSound_tagsBox_inside{
+	position: absolute;
+	z-index: 20;
+	background: rgba(255, 250, 205, 0.95);
+	border: 1px solid #D68920;
+	width: 18px;
+	height: 18px;
+}
+
+.tagText{
+	color: #030B23;
+	font-size: 12px;
+	font-weight: bold;
+}
